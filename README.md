@@ -52,7 +52,7 @@ This model represents an online food ordering system, including:
 - Stores and employees
 - Delivery management
 
-![EER Diagram](level-1/exercise-2/eer_pizzeria.png)
+![EER Diagram](level-1/exercise-2/eer_pizza_store.png)
 
 ---
 
