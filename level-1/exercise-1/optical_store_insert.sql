@@ -14,10 +14,10 @@ INSERT INTO employee (name) VALUES
 ('Maxwell'),
 ('Cate');
 
-INSERT INTO lens (brand, lens_graduation, type_frame, color_frame, color_lens, price, suppliers_id) VALUES
-('RayBan', '1.5', 'metal', 'black', 'transparent', 120.50, 1),
-('D&G', '2.0', 'plastic', 'blue', 'dark', 150.00, 2),
-('Hawkers', '1.75', 'rimless', 'silver', 'light', 200.00, 1);
+INSERT INTO lens (brand, lens_graduation_right, lengs_graduation_left, type_frame, color_frame, color_lens, price, suppliers_id) VALUES
+('RayBan', 1.50, 1.25, 'metal', 'black', 'transparent', 120.50, 1),
+('D&G', 2.00, 1.75, 'plastic', 'blue', 'dark', 150.00, 2),
+('Hawkers', 1.75, 1.50, 'rimless', 'silver', 'light', 200.00, 1);
 
 INSERT INTO sale (clients_id, employee_id, lens_id, record_data_sale) VALUES
 (1, 1, 1, '2026-03-05 10:15:00'),

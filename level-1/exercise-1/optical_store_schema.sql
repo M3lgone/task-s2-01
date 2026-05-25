@@ -65,7 +65,8 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `optical_store`.`lens` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `brand` VARCHAR(45) NOT NULL,
-  `lens_graduation` VARCHAR(45) NOT NULL,
+  `lens_graduation_right` DECIMAL NOT NULL,
+  `lengs_graduation_left` DECIMAL NOT NULL,
   `type_frame` ENUM('plastic', 'metal', 'rimless') NOT NULL,
   `color_frame` VARCHAR(12) NOT NULL,
   `color_lens` VARCHAR(12) NOT NULL,

@@ -22,10 +22,10 @@ CREATE TABLE IF NOT EXISTS `pizza_store`.`client` (
   `name` VARCHAR(45) NOT NULL,
   `surname` VARCHAR(45) NOT NULL,
   `adress` VARCHAR(45) NOT NULL,
-  `cp` VARCHAR(45) NOT NULL,
+  `cp` INT(5) NOT NULL,
   `city` VARCHAR(45) NULL,
   `province` VARCHAR(45) NOT NULL,
-  `phone` VARCHAR(45) NOT NULL,
+  `phone` INT(11) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 
@@ -71,11 +71,10 @@ CREATE TABLE IF NOT EXISTS `pizza_store`.`order` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `date_time_order` DATETIME NOT NULL,
   `delivery_place` ENUM('home', 'store') NOT NULL,
-  `quantity` VARCHAR(45) NOT NULL,
   `price` DECIMAL(10,2) NOT NULL,
-  `employee_id` INT NOT NULL,
+  `employee_id` INT NULL,
   `store_id` INT NOT NULL,
-  `delivery_order` VARCHAR(45) NULL,
+  `delivery_order` INT NOT NULL,
   `date_time_delivery` DATETIME NULL,
   `client_id` INT NOT NULL,
   PRIMARY KEY (`id`),
@@ -137,6 +136,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `pizza_store`.`product_has_order` (
   `product_id` INT NOT NULL,
   `order_id` INT NOT NULL,
+  `quantity` INT NOT NULL,
   PRIMARY KEY (`product_id`, `order_id`),
   INDEX `fk_product_has_order_order1_idx` (`order_id` ASC) VISIBLE,
   INDEX `fk_product_has_order_product1_idx` (`product_id` ASC) VISIBLE,
@@ -156,3 +156,4 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
